@@ -8,6 +8,6 @@
 </head>
 <body>
   <h1>Welcome to JFed's Life</h1>
-  <p>Videography, photography, and creative storytelling.</p>
+  <p>Wedding Videography | Sports Photography | Content Creation.</p>
 </body>
 </html>
