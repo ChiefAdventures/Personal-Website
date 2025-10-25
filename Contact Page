@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | JFed's Life</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">JFed's Life</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="weddings.html">Weddings</a>
+      <a href="services.html">Services</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-form">
+      <h2>Let's Connect</h2>
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="_replyto" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Tell me about your project..." required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 JFed’s Life</p>
+  </footer>
+</body>
+</html>
