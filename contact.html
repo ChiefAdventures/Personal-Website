@@ -1,49 +1,71 @@
-<aside class="sidebar">
-  
-  <nav>
-    <a href="index.html">Home</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | JFed’s Life</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <nav>
+      <a href="index.html">Home</a>
 
-    <div class="dropdown">
-      <button type="button" class="dropbtn">
-        Articles <span class="arrow">▸</span>
-      </button>
-      <div class="dropdown-content">
-        <a href="articles-weddings.html">Weddings</a>
-        <a href="articles-content.html">Content Creation</a>
-        <a href="articles-sports.html">Sports Photography</a>
-        <a href="articles-gear.html">Gear</a>
-        <a href="articles-faith.html">Faith/Life</a>
-        <a href="articles-bts.html">Behind the Scenes</a>
+      <div class="dropdown">
+        <button type="button" class="dropbtn">
+          Articles <span class="arrow">▸</span>
+        </button>
+        <div class="dropdown-content">
+          <a href="articles-weddings.html">Weddings</a>
+          <a href="articles-content.html">Content Creation</a>
+          <a href="articles-sports.html">Sports Photography</a>
+          <a href="articles-gear.html">Gear</a>
+          <a href="articles-faith.html">Faith/Life</a>
+          <a href="articles-bts.html">Behind the Scenes</a>
+        </div>
       </div>
-    </div>
 
-    <div class="dropdown">
-      <button type="button" class="dropbtn">
-        Socials <span class="arrow">▸</span>
-      </button>
-      <div class="dropdown-content">
-        <a href="https://www.instagram.com/" target="_blank">Instagram</a>
-        <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
-        <a href="https://www.youtube.com/" target="_blank">YouTube</a>
-        <a href="https://www.facebook.com/" target="_blank">Facebook</a>
-        <a href="https://vimeo.com/" target="_blank">Vimeo</a>
+      <div class="dropdown">
+        <button type="button" class="dropbtn">
+          Socials <span class="arrow">▸</span>
+        </button>
+        <div class="dropdown-content">
+          <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+          <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
+          <a href="https://www.youtube.com/" target="_blank">YouTube</a>
+          <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+          <a href="https://vimeo.com/" target="_blank">Vimeo</a>
+        </div>
       </div>
-    </div>
 
-    <a href="contact.html">Contact</a>
-    <a href="faq.html">FAQ</a>
-  </nav>
-</aside>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </aside>
 
-    <!-- Unique page content goes here -->
-<main class="content">
-  <h2>Contact & Booking</h2>
-  <p>Ready to collaborate or book a session? Send me a message below.</p>
-  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required><br>
-    <input type="email" name="_replyto" placeholder="Your Email" required><br>
-    <textarea name="message" placeholder="Your Message" required></textarea><br>
-    <button type="submit">Send Message</button>
-  </form>
-</main>
-<script src="js/main.js"></script>
+  <main class="content">
+    <h2>Contact</h2>
+    <p>Interested in working together or have a question? Reach out below!</p>
+
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <label for="name">Name</label><br />
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <label for="email">Email</label><br />
+      <input type="email" id="email" name="_replyto" required /><br /><br />
+
+      <label for="message">Message</label><br />
+      <textarea id="message" name="message" rows="6" required></textarea><br /><br />
+
+      <button type="submit" class="button">Send Message</button>
+    </form>
+
+    <p style="margin-top: 20px;">
+      Or email directly: <a href="mailto:1chiefadventures1@gmail.com">1chiefadventures1@gmail.com</a>
+    </p>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+
