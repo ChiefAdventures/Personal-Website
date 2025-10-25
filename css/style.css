@@ -1,63 +1,103 @@
 body {
   margin: 0;
-  display: flex;
-  background-color: #0f0f0f;
+  font-family: Arial, sans-serif;
+  background-color: #0e0e0e;
   color: #fff;
-  font-family: 'Inter', Arial, sans-serif;
-  height: 100vh;
+  display: flex;
 }
 
 .sidebar {
-  width: 220px;
-  background-color: #000;
-  padding: 40px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  width: 250px;
+  background-color: #111;
+  height: 100vh;
+  padding: 20px;
   position: fixed;
-  top: 0;
-  bottom: 0;
+  color: white;
 }
 
 .sidebar h1 {
-  font-size: 1.4rem;
+  font-size: 1.5em;
   margin-bottom: 30px;
+  text-align: left;
+  letter-spacing: 1px;
 }
 
-.sidebar nav a {
+.sidebar nav a, 
+.dropdown .dropbtn {
   display: block;
-  color: #ccc;
+  color: #eee;
   text-decoration: none;
-  margin-bottom: 12px;
-  transition: color 0.3s;
+  padding: 10px 0;
+  text-align: left;
+  background: none;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  width: 100%;
+  transition: color 0.3s ease, background 0.3s ease;
 }
 
-.sidebar nav a:hover {
-  color: #fff;
+.sidebar nav a:hover,
+.dropdown .dropbtn:hover {
+  color: #00aaff;
+}
+
+.dropdown {
+  margin-top: 5px;
+}
+
+.dropdown-content {
+  display: none;
+  padding-left: 15px;
+}
+
+.dropdown-content a {
+  font-size: 0.9em;
+  color: #bbb;
+  display: block;
+  padding: 6px 0;
+  transition: color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  color: #00aaff;
+}
+
+.dropbtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.dropdown.active .arrow {
+  transform: rotate(90deg);
+}
+
+.dropdown.active .dropdown-content {
+  display: block;
 }
 
 .content {
-  margin-left: 260px;
-  padding: 60px 40px;
+  margin-left: 270px;
+  padding: 40px;
   max-width: 800px;
 }
 
-h2 {
-  margin-top: 0;
-  font-size: 1.8rem;
-}
-
-a.button {
-  display: inline-block;
-  background: #fff;
-  color: #000;
+.button {
+  background-color: #00aaff;
+  color: #fff;
   padding: 10px 20px;
-  border-radius: 5px;
+  border: none;
   text-decoration: none;
-  font-weight: bold;
-  margin-top: 20px;
+  border-radius: 4px;
+  display: inline-block;
+  transition: background 0.3s ease;
 }
 
-a.button:hover {
-  background: #ddd;
+.button:hover {
+  background-color: #008fcc;
 }
