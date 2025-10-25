@@ -1,15 +1,11 @@
 /
-├── index.html
-├── weddings.html
-├── social.html
-├── sports.html
+├── index.html               (Home)
 ├── articles.html
-├── services.html
+├── social.html
 ├── contact.html
+├── faq.html
+├── /css
+│   └── style.css
 ├── /assets
 │   ├── /images
 │   └── /videos
-├── /css
-│   └── style.css
-└── /js
-    └── main.js
