@@ -1,6 +1,17 @@
-document.querySelectorAll('.dropbtn').forEach(button => {
-  button.addEventListener('click', () => {
-    const dropdown = button.parentElement;
-    dropdown.classList.toggle('active');
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.dropbtn');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const dropdown = button.parentElement;
+
+      // Close all other dropdowns first
+      document.querySelectorAll('.dropdown').forEach(d => {
+        if (d !== dropdown) d.classList.remove('active');
+      });
+
+      // Toggle the clicked one
+      dropdown.classList.toggle('active');
+    });
   });
 });
