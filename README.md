@@ -1,22 +1,13 @@
 # Personal-Website
-app/
-  layout.tsx
-  page.tsx                   # Home
-  articles/
-    page.tsx                 # Articles index
-    [slug]/page.tsx          # Article detail
-  social/page.tsx
-  contact/page.tsx
-  faq/page.tsx
-  api/contact/route.ts       # Only if using Resend
-components/
-  Header.tsx
-  Footer.tsx
-  VideoEmbed.tsx
-  ArticleCard.tsx
-  ContactForm.tsx
-content/
-  articles/my-first-post.mdx
-public/
-  og.jpg
-  favicon.ico
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JFed's Life</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <h1>Welcome to JFed's Life</h1>
+  <p>Videography, photography, and creative storytelling.</p>
+</body>
+</html>
