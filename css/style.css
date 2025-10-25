@@ -1,3 +1,4 @@
+/* General Layout */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -6,6 +7,7 @@ body {
   display: flex;
 }
 
+/* Sidebar */
 .sidebar {
   width: 250px;
   background-color: #111;
@@ -37,11 +39,13 @@ body {
   transition: color 0.3s ease, background 0.3s ease;
 }
 
+/* Subtle hover color change */
 .sidebar nav a:hover,
 .dropdown .dropbtn:hover {
   color: #00aaff;
 }
 
+/* Dropdown styling */
 .dropdown {
   margin-top: 5px;
 }
@@ -63,6 +67,7 @@ body {
   color: #00aaff;
 }
 
+/* Arrow rotation */
 .dropbtn {
   display: flex;
   justify-content: space-between;
@@ -77,10 +82,12 @@ body {
   transform: rotate(90deg);
 }
 
+/* Show content when active */
 .dropdown.active .dropdown-content {
   display: block;
 }
 
+/* Main content */
 .content {
   margin-left: 270px;
   padding: 40px;
