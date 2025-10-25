@@ -1,92 +1,63 @@
 body {
   margin: 0;
-  background: #0f0f0f;
+  display: flex;
+  background-color: #0f0f0f;
   color: #fff;
   font-family: 'Inter', Arial, sans-serif;
-  line-height: 1.6;
+  height: 100vh;
 }
 
-header.navbar {
+.sidebar {
+  width: 220px;
+  background-color: #000;
+  padding: 40px 20px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #000;
-  padding: 20px 40px;
-  position: sticky;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: fixed;
   top: 0;
+  bottom: 0;
 }
 
-header .logo {
-  font-weight: bold;
-  font-size: 1.2rem;
+.sidebar h1 {
+  font-size: 1.4rem;
+  margin-bottom: 30px;
 }
 
-nav a {
-  color: #fff;
+.sidebar nav a {
+  display: block;
+  color: #ccc;
   text-decoration: none;
-  margin: 0 12px;
+  margin-bottom: 12px;
   transition: color 0.3s;
 }
 
-nav a:hover {
-  color: #ccc;
+.sidebar nav a:hover {
+  color: #fff;
 }
 
-.hero {
-  background: url('../assets/images/hero-bg.jpg') center/cover no-repeat;
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
-  padding: 0 20px;
+.content {
+  margin-left: 260px;
+  padding: 60px 40px;
+  max-width: 800px;
 }
 
-.hero h1 {
-  font-size: 2.8rem;
-  margin-bottom: 10px;
+h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 25px;
-}
-
-.button {
+a.button {
+  display: inline-block;
   background: #fff;
   color: #000;
   padding: 10px 20px;
-  border-radius: 4px;
+  border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
+  margin-top: 20px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  padding: 40px;
-}
-
-.card, .service-card {
-  background: #1a1a1a;
-  border-radius: 10px;
-  padding: 20px;
-  transition: transform 0.3s;
-}
-
-.card:hover, .service-card:hover {
-  transform: translateY(-5px);
-}
-
-.card img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-footer {
-  background: #000;
-  text-align: center;
-  padding: 20px;
+a.button:hover {
+  background: #ddd;
 }
