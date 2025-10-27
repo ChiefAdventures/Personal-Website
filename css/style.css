@@ -180,7 +180,7 @@ nav a:hover,
   max-width: 800px;
   margin: 0 auto;      /* centres the block horizontally */
   padding: 40px 20px;  /* optional: adds breathing room */
-  text-align: center;  /* remove this if you prefer left-aligned text */
+  text-align: 
 }
 
 /* ===== RESPONSIVE ===== */
