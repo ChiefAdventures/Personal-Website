@@ -1,4 +1,6 @@
-/* General Layout */
+/* ===========================
+   GLOBAL LAYOUT & RESET
+=========================== */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -7,7 +9,15 @@ body {
   overflow-x: hidden;
 }
 
-/* Header */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+/* ===========================
+   HEADER & NAVIGATION
+=========================== */
 header.topnav {
   display: flex;
   justify-content: space-between;
@@ -35,12 +45,13 @@ nav {
 nav a,
 .dropbtn {
   color: #fff;
-  text-decoration: none;
   background: none;
   border: none;
   font-size: 1em;
   cursor: pointer;
-  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
 }
 
 nav a:hover,
@@ -75,7 +86,7 @@ nav a:hover,
   display: block;
   padding: 10px;
   color: #bbb;
-  text-decoration: none;
+  font-size: 0.95em;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
@@ -92,7 +103,9 @@ nav a:hover,
   transform: rotate(180deg);
 }
 
-/* Hero Section */
+/* ===========================
+   HERO SECTION
+=========================== */
 .hero-section {
   position: relative;
   height: 100vh;
@@ -121,13 +134,14 @@ nav a:hover,
 
 .hero-overlay h1 {
   font-size: 2.5em;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
 }
 
 .hero-overlay p {
   font-size: 1.2em;
   color: #ddd;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .button {
@@ -135,7 +149,6 @@ nav a:hover,
   color: #fff;
   padding: 12px 30px;
   border-radius: 4px;
-  text-decoration: none;
   font-weight: bold;
   transition: background 0.3s ease;
 }
@@ -144,14 +157,17 @@ nav a:hover,
   background-color: #008fcc;
 }
 
-/* Footer */
+/* ===========================
+   FOOTER
+=========================== */
 .footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  padding: 20px 0;
+  padding: 30px 0;
   background: rgba(0, 0, 0, 0.85);
+  text-align: center;
 }
 
 .social-icons {
@@ -161,7 +177,7 @@ nav a:hover,
 
 .social-icons a {
   color: #bbb;
-  font-size: 1.5em;
+  font-size: 1.6em;
   transition: color 0.3s ease;
 }
 
@@ -170,21 +186,26 @@ nav a:hover,
 }
 
 .footer-contact {
-  color: #00aaff;
-  text-decoration: none;
+  background-color: #00aaff;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 4px;
   font-weight: bold;
-  font-size: 1.1em;
+  transition: background 0.3s ease;
 }
 
 .footer-contact:hover {
-  text-decoration: underline;
+  background-color: #008fcc;
 }
 
-/* Responsive */
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
 @media (max-width: 768px) {
   header.topnav {
     flex-direction: column;
     align-items: flex-start;
+    padding: 15px 25px;
   }
 
   nav {
@@ -200,5 +221,9 @@ nav a:hover,
 
   .hero-overlay p {
     font-size: 1em;
+  }
+
+  .social-icons {
+    gap: 18px;
   }
 }
