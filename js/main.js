@@ -5,16 +5,19 @@ document.addEventListener('DOMContentLoaded', () => {
     button.addEventListener('click', () => {
       const dropdown = button.parentElement;
 
-      // Close all other dropdowns first
+      // Close all other dropdowns
       document.querySelectorAll('.dropdown').forEach(d => {
-        if (d !== dropdown) d.classList.remove('active');
+        if (d !== dropdown) {
+          d.classList.remove('active');
+        }
       });
 
-      // Toggle the clicked one
+      // Toggle the clicked dropdown
       dropdown.classList.toggle('active');
     });
   });
 });
+
 document.getElementById("menu-toggle").addEventListener("click", function() {
   document.getElementById("nav-links").classList.toggle("show");
 });
