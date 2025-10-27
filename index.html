@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JFed's Life | Videography & Photography</title>
   <link rel="stylesheet" href="css/style.css" />
+
   <style>
-    /* --- TEMP RESPONSIVE NAVBAR STYLING --- */
+    /* Base layout */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -14,58 +15,59 @@
       color: #fff;
     }
 
-    header {
-      background-color: #111;
+    /* Top Navigation */
+    header.topnav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 15px 25px;
+      background-color: #111;
+      padding: 15px 40px;
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 100;
     }
 
     .logo {
-      font-size: 1.5em;
+      font-size: 1.6em;
+      color: #00aaff;
       font-weight: bold;
       letter-spacing: 1px;
-      color: #00aaff;
+      margin: 0;
     }
 
     nav {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 30px;
     }
 
-    nav a {
+    nav a,
+    .dropbtn {
       color: #fff;
       text-decoration: none;
+      background: none;
+      border: none;
       font-size: 1em;
+      cursor: pointer;
       transition: color 0.3s ease;
+      display: flex;
+      align-items: center;
+      padding: 8px 0;
     }
 
-    nav a:hover {
+    nav a:hover,
+    .dropbtn:hover {
       color: #00aaff;
     }
 
-    /* Dropdown */
+    /* Dropdowns */
     .dropdown {
       position: relative;
     }
 
-    .dropbtn {
-      background: none;
-      border: none;
-      color: #fff;
-      cursor: pointer;
-      font-size: 1em;
-      display: flex;
-      align-items: center;
-    }
-
     .arrow {
       margin-left: 6px;
+      font-size: 0.8em;
       transition: transform 0.3s ease;
     }
 
@@ -78,7 +80,7 @@
       left: 0;
       border-radius: 4px;
       overflow: hidden;
-      z-index: 5;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     }
 
     .dropdown-content a {
@@ -87,6 +89,7 @@
       color: #bbb;
       text-decoration: none;
       font-size: 0.95em;
+      transition: background 0.3s ease, color 0.3s ease;
     }
 
     .dropdown-content a:hover {
@@ -99,49 +102,26 @@
     }
 
     .dropdown:hover .arrow {
-      transform: rotate(90deg);
-    }
-
-    /* Hamburger Menu (mobile) */
-    .menu-toggle {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-
-    .bar {
-      width: 25px;
-      height: 3px;
-      background-color: #fff;
-      margin: 4px 0;
-      transition: 0.3s;
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        display: none;
-        flex-direction: column;
-        background-color: #111;
-        width: 100%;
-        text-align: center;
-        padding-bottom: 10px;
-      }
-
-      nav.active {
-        display: flex;
-      }
-
-      .menu-toggle {
-        display: flex;
-      }
+      transform: rotate(180deg);
     }
 
     /* Content */
     .content {
       text-align: center;
-      padding: 60px 20px;
+      padding: 80px 20px;
       max-width: 700px;
       margin: auto;
+    }
+
+    .content h1 {
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+
+    .content p {
+      font-size: 1.1em;
+      color: #ddd;
+      margin-bottom: 30px;
     }
 
     .button {
@@ -157,24 +137,39 @@
     .button:hover {
       background-color: #008fcc;
     }
+
+    /* Responsive (mobile) */
+    @media (max-width: 768px) {
+      header.topnav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 25px;
+      }
+
+      nav {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .dropdown-content {
+        position: static;
+        background-color: #111;
+        box-shadow: none;
+      }
+    }
   </style>
 </head>
+
 <body>
-
-  <header>
-    <div class="logo">JFed’s Life</div>
-
-    <div class="menu-toggle" id="menu-toggle">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
-
-    <nav id="nav">
+  <header class="topnav">
+    <h1 class="logo">JFed’s Life</h1>
+    <nav>
       <a href="index.html">Home</a>
 
       <div class="dropdown">
-        <button class="dropbtn">Articles <span class="arrow">▸</span></button>
+        <button class="dropbtn">Articles <span class="arrow">▾</span></button>
         <div class="dropdown-content">
           <a href="articles-weddings.html">Weddings</a>
           <a href="articles-content.html">Content Creation</a>
@@ -186,7 +181,7 @@
       </div>
 
       <div class="dropdown">
-        <button class="dropbtn">Socials <span class="arrow">▸</span></button>
+        <button class="dropbtn">Socials <span class="arrow">▾</span></button>
         <div class="dropdown-content">
           <a href="https://www.instagram.com/" target="_blank">Instagram</a>
           <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
@@ -207,16 +202,6 @@
     <a href="mailto:1chiefadventures1@gmail.com" class="button">Inquire Now</a>
   </main>
 
-  <script>
-    // Mobile toggle
-    const toggle = document.getElementById("menu-toggle");
-    const nav = document.getElementById("nav");
-
-    toggle.addEventListener("click", () => {
-      nav.classList.toggle("active");
-      toggle.classList.toggle("open");
-    });
-  </script>
-
+  <script src="js/main.js"></script>
 </body>
 </html>
