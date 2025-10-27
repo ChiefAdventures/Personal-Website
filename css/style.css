@@ -103,6 +103,17 @@ nav a:hover,
   transform: rotate(180deg);
 }
 
+/* Show dropdown when the .active class is present */
+.dropdown.active .dropdown-content {
+  display: block;
+}
+
+/* Rotate the arrow when active */
+.dropdown.active .arrow {
+  transform: rotate(180deg);
+}
+
+
 /* ===== HERO SECTION ===== */
 .hero {
   text-align: center;
