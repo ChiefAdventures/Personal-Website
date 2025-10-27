@@ -188,19 +188,59 @@ nav a:hover,
   }
 }
 
-/* ===== ANIMATIONS ===== */
+/* ===== FADE-IN ANIMATION ===== */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .fade-in {
   opacity: 0;
-  animation: fadeIn 1s ease-out forwards;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.hero.fade-in {
+  animation-delay: 0.3s;
+}
+
+.footer.fade-in {
+  animation-delay: 0.6s;
+}
+
+/* ===== FOOTER INLINE LAYOUT ===== */
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-content .button {
+  background-color: #00aaff;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.footer-content .button:hover {
+  background-color: #008fcc;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons a {
+  color: #bbb;
+  font-size: 1.6em;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #00aaff;
 }
