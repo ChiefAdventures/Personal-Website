@@ -3,171 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JFed's Life | Videography & Photography</title>
+  <title>JFed’s Life | Videography & Photography</title>
   <link rel="stylesheet" href="css/style.css" />
-
-  <style>
-    /* Base layout */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #0e0e0e;
-      color: #fff;
-    }
-
-    /* Top Navigation */
-    header.topnav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #111;
-      padding: 15px 40px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .logo {
-      font-size: 1.6em;
-      color: #00aaff;
-      font-weight: bold;
-      letter-spacing: 1px;
-      margin: 0;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-    }
-
-    nav a,
-    .dropbtn {
-      color: #fff;
-      text-decoration: none;
-      background: none;
-      border: none;
-      font-size: 1em;
-      cursor: pointer;
-      transition: color 0.3s ease;
-      display: flex;
-      align-items: center;
-      padding: 8px 0;
-    }
-
-    nav a:hover,
-    .dropbtn:hover {
-      color: #00aaff;
-    }
-
-    /* Dropdowns */
-    .dropdown {
-      position: relative;
-    }
-
-    .arrow {
-      margin-left: 6px;
-      font-size: 0.8em;
-      transition: transform 0.3s ease;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #222;
-      min-width: 180px;
-      top: 35px;
-      left: 0;
-      border-radius: 4px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    }
-
-    .dropdown-content a {
-      display: block;
-      padding: 10px;
-      color: #bbb;
-      text-decoration: none;
-      font-size: 0.95em;
-      transition: background 0.3s ease, color 0.3s ease;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #333;
-      color: #00aaff;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    .dropdown:hover .arrow {
-      transform: rotate(180deg);
-    }
-
-    /* Content */
-    .content {
-      text-align: center;
-      padding: 80px 20px;
-      max-width: 700px;
-      margin: auto;
-    }
-
-    .content h1 {
-      font-size: 2em;
-      margin-bottom: 15px;
-    }
-
-    .content p {
-      font-size: 1.1em;
-      color: #ddd;
-      margin-bottom: 30px;
-    }
-
-    .button {
-      background-color: #00aaff;
-      color: #fff;
-      padding: 12px 25px;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-
-    .button:hover {
-      background-color: #008fcc;
-    }
-
-    /* Responsive (mobile) */
-    @media (max-width: 768px) {
-      header.topnav {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 15px 25px;
-      }
-
-      nav {
-        flex-direction: column;
-        width: 100%;
-        gap: 10px;
-        margin-top: 10px;
-      }
-
-      .dropdown-content {
-        position: static;
-        background-color: #111;
-        box-shadow: none;
-      }
-    }
-  </style>
+  <script src="https://kit.fontawesome.com/a2b5e6f70f.js" crossorigin="anonymous"></script> <!-- Font Awesome -->
 </head>
 
 <body>
   <header class="topnav">
-    <h1 class="logo">JFed’s Life</h1>
+    <div class="logo">
+      <!-- Placeholder for logo image later -->
+      <!-- <img src="assets/images/logo.png" alt="JFed’s Life Logo" class="logo-img" /> -->
+      <h1>JFed’s Life</h1>
+    </div>
     <nav>
       <a href="index.html">Home</a>
-
       <div class="dropdown">
         <button class="dropbtn">Articles <span class="arrow">▾</span></button>
         <div class="dropdown-content">
@@ -179,7 +28,6 @@
           <a href="articles-bowling.html">Bowling / Ultimate Frisbee</a>
         </div>
       </div>
-
       <div class="dropdown">
         <button class="dropbtn">Socials <span class="arrow">▾</span></button>
         <div class="dropdown-content">
@@ -190,17 +38,34 @@
           <a href="https://vimeo.com/" target="_blank">Vimeo</a>
         </div>
       </div>
-
       <a href="contact.html">Contact</a>
       <a href="faq.html">FAQ</a>
     </nav>
   </header>
 
-  <main class="content">
-    <h1>Capturing Emotions, Sounds, and Visuals</h1>
-    <p>Weddings. Sports. Stories. Content that connects.</p>
-    <a href="mailto:1chiefadventures1@gmail.com" class="button">Inquire Now</a>
+  <main class="hero-section">
+    <video autoplay muted loop playsinline id="bg-video">
+      <source src="assets/videos/background.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="hero-overlay">
+      <h1>Capturing Emotions, Sounds, and Visuals</h1>
+      <p>Weddings. Sports. Stories. Content that connects.</p>
+      <a href="contact.html" class="button">Get in Touch</a>
+    </div>
   </main>
+
+  <footer class="footer">
+    <div class="social-icons">
+      <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://vimeo.com/" target="_blank"><i class="fab fa-vimeo"></i></a>
+    </div>
+    <a href="contact.html" class="footer-contact">Contact Me</a>
+  </footer>
 
   <script src="js/main.js"></script>
 </body>
