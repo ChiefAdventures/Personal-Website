@@ -157,17 +157,15 @@ nav a:hover,
   background-color: #008fcc;
 }
 
-/* ===========================
-   FOOTER
-=========================== */
+/* Footer */
 .footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  padding: 30px 0;
-  background: rgba(0, 0, 0, 0.85);
-  text-align: center;
+  padding: 25px 0;
+  background: rgba(0, 0, 0, 0.9);
+  border-top: 1px solid #111;
 }
 
 .social-icons {
@@ -186,17 +184,23 @@ nav a:hover,
 }
 
 .footer-contact {
-  background-color: #00aaff;
-  color: #fff;
-  padding: 10px 25px;
-  border-radius: 4px;
+  color: #00aaff;
+  text-decoration: none;
   font-weight: bold;
-  transition: background 0.3s ease;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
 }
 
 .footer-contact:hover {
-  background-color: #008fcc;
+  color: #fff;
+  text-decoration: underline;
 }
+
+/* Ensure icons render correctly */
+.fab {
+  vertical-align: middle;
+}
+
 
 /* ===========================
    RESPONSIVE DESIGN
