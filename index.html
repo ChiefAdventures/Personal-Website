@@ -1,37 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JFed's Life | Videography & Photography</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* --- TEMP RESPONSIVE NAVBAR STYLING --- */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0e0e0e;
+      color: #fff;
+    }
+
+    header {
+      background-color: #111;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 25px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: #00aaff;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1em;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00aaff;
+    }
+
+    /* Dropdown */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropbtn {
+      background: none;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      font-size: 1em;
+      display: flex;
+      align-items: center;
+    }
+
+    .arrow {
+      margin-left: 6px;
+      transition: transform 0.3s ease;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #222;
+      min-width: 180px;
+      top: 35px;
+      left: 0;
+      border-radius: 4px;
+      overflow: hidden;
+      z-index: 5;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px;
+      color: #bbb;
+      text-decoration: none;
+      font-size: 0.95em;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #333;
+      color: #00aaff;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .arrow {
+      transform: rotate(90deg);
+    }
+
+    /* Hamburger Menu (mobile) */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .bar {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      margin: 4px 0;
+      transition: 0.3s;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background-color: #111;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 10px;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    /* Content */
+    .content {
+      text-align: center;
+      padding: 60px 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .button {
+      background-color: #00aaff;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #008fcc;
+    }
+  </style>
 </head>
 <body>
-  <aside class="sidebar">
-    <h1>JFed’s Life</h1>
-    <nav>
+
+  <header>
+    <div class="logo">JFed’s Life</div>
+
+    <div class="menu-toggle" id="menu-toggle">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
+    <nav id="nav">
       <a href="index.html">Home</a>
 
-      <!-- Articles Dropdown -->
       <div class="dropdown">
-        <button class="dropbtn">
-          Articles <span class="arrow">▸</span>
-        </button>
+        <button class="dropbtn">Articles <span class="arrow">▸</span></button>
         <div class="dropdown-content">
           <a href="articles-weddings.html">Weddings</a>
           <a href="articles-content.html">Content Creation</a>
           <a href="articles-sports.html">Sports Photography</a>
           <a href="articles-gear.html">Gear</a>
           <a href="articles-faith.html">Faith/Life</a>
-          <a href="articles-bts.html">Behind the Scenes</a>
+          <a href="articles-bowling.html">Bowling / Ultimate Frisbee</a>
         </div>
       </div>
 
-      <!-- Social Dropdown -->
       <div class="dropdown">
-        <button class="dropbtn">
-          Socials <span class="arrow">▸</span>
-        </button>
+        <button class="dropbtn">Socials <span class="arrow">▸</span></button>
         <div class="dropdown-content">
           <a href="https://www.instagram.com/" target="_blank">Instagram</a>
           <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
@@ -44,7 +199,7 @@
       <a href="contact.html">Contact</a>
       <a href="faq.html">FAQ</a>
     </nav>
-  </aside>
+  </header>
 
   <main class="content">
     <h1>Capturing Emotions, Sounds, and Visuals</h1>
@@ -52,8 +207,16 @@
     <a href="mailto:1chiefadventures1@gmail.com" class="button">Inquire Now</a>
   </main>
 
-  <script src="js/main.js"></script>
+  <script>
+    // Mobile toggle
+    const toggle = document.getElementById("menu-toggle");
+    const nav = document.getElementById("nav");
+
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+      toggle.classList.toggle("open");
+    });
+  </script>
+
 </body>
 </html>
-<script src="js/main.js"></script>
-
