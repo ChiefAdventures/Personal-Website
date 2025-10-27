@@ -3,20 +3,102 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JFed’s Life | Videography & Photography</title>
+  <title>JFed's Life | Videography & Photography</title>
+
+  <!-- Font Awesome for Social Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Main CSS -->
   <link rel="stylesheet" href="css/style.css" />
-  <script src="https://kit.fontawesome.com/a2b5e6f70f.js" crossorigin="anonymous"></script> <!-- Font Awesome -->
+
+  <style>
+    /* --- Background Video --- */
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.35;
+    }
+
+    /* --- Content Overlay --- */
+    .hero {
+      position: relative;
+      text-align: center;
+      color: white;
+      padding: 200px 20px;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      color: #ddd;
+      margin-bottom: 30px;
+    }
+
+    /* --- Footer --- */
+    footer {
+      background-color: rgba(17, 17, 17, 0.9);
+      text-align: center;
+      padding: 40px 20px;
+      position: relative;
+      z-index: 3;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-bottom: 20px;
+    }
+
+    .social-icons a {
+      color: #00aaff;
+      font-size: 1.8em;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #fff;
+    }
+
+    footer .button {
+      background-color: #00aaff;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    footer .button:hover {
+      background-color: #008fcc;
+    }
+  </style>
 </head>
 
 <body>
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="video-background">
+    <source src="assets/videos/background.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Header Navigation -->
   <header class="topnav">
-    <div class="logo">
-      <!-- Placeholder for logo image later -->
-      <!-- <img src="assets/images/logo.png" alt="JFed’s Life Logo" class="logo-img" /> -->
-      <h1>JFed’s Life</h1>
-    </div>
+    <h1 class="logo">JFed’s Life</h1>
     <nav>
       <a href="index.html">Home</a>
+
       <div class="dropdown">
         <button class="dropbtn">Articles <span class="arrow">▾</span></button>
         <div class="dropdown-content">
@@ -28,6 +110,7 @@
           <a href="articles-bowling.html">Bowling / Ultimate Frisbee</a>
         </div>
       </div>
+
       <div class="dropdown">
         <button class="dropbtn">Socials <span class="arrow">▾</span></button>
         <div class="dropdown-content">
@@ -38,25 +121,21 @@
           <a href="https://vimeo.com/" target="_blank">Vimeo</a>
         </div>
       </div>
+
       <a href="contact.html">Contact</a>
       <a href="faq.html">FAQ</a>
     </nav>
   </header>
 
-  <main class="hero-section">
-    <video autoplay muted loop playsinline id="bg-video">
-      <source src="assets/videos/background.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-
-    <div class="hero-overlay">
-      <h1>Capturing Emotions, Sounds, and Visuals</h1>
-      <p>Weddings. Sports. Stories. Content that connects.</p>
-      <a href="contact.html" class="button">Get in Touch</a>
-    </div>
+  <!-- Hero Content -->
+  <main class="hero">
+    <h1>Capturing Emotion, Energy & Real Stories</h1>
+    <p>Weddings. Sports. Life. Stories that move people.</p>
+    <a href="mailto:1chiefadventures1@gmail.com" class="button">Book Your Shoot</a>
   </main>
 
-  <footer class="footer">
+  <!-- Footer with Icons -->
+  <footer>
     <div class="social-icons">
       <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="https://www.tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a>
@@ -64,7 +143,7 @@
       <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
       <a href="https://vimeo.com/" target="_blank"><i class="fab fa-vimeo"></i></a>
     </div>
-    <a href="contact.html" class="footer-contact">Contact Me</a>
+    <a href="contact.html" class="button">Contact Me</a>
   </footer>
 
   <script src="js/main.js"></script>
