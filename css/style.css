@@ -1,6 +1,4 @@
-/* ===========================
-   GLOBAL LAYOUT & RESET
-=========================== */
+/* ===== GENERAL LAYOUT ===== */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -9,49 +7,52 @@ body {
   overflow-x: hidden;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-  transition: color 0.3s ease;
+/* ===== BACKGROUND VIDEO ===== */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.45);
 }
 
-/* ===========================
-   HEADER & NAVIGATION
-=========================== */
+/* ===== HEADER ===== */
 header.topnav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #111;
+  background-color: rgba(0, 0, 0, 0.85);
   padding: 15px 40px;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 10;
 }
 
-.logo h1 {
-  color: #00aaff;
+.logo {
   font-size: 1.8em;
-  margin: 0;
+  color: #00aaff;
+  font-weight: bold;
   letter-spacing: 1px;
 }
 
 nav {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 30px;
 }
 
 nav a,
 .dropbtn {
   color: #fff;
+  text-decoration: none;
   background: none;
   border: none;
   font-size: 1em;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  padding: 8px 0;
+  transition: color 0.3s ease;
 }
 
 nav a:hover,
@@ -59,7 +60,7 @@ nav a:hover,
   color: #00aaff;
 }
 
-/* Dropdowns */
+/* ===== DROPDOWNS ===== */
 .dropdown {
   position: relative;
 }
@@ -73,7 +74,7 @@ nav a:hover,
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #222;
+  background-color: rgba(30, 30, 30, 0.95);
   min-width: 180px;
   top: 35px;
   left: 0;
@@ -86,7 +87,7 @@ nav a:hover,
   display: block;
   padding: 10px;
   color: #bbb;
-  font-size: 0.95em;
+  text-decoration: none;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
@@ -103,45 +104,22 @@ nav a:hover,
   transform: rotate(180deg);
 }
 
-/* ===========================
-   HERO SECTION
-=========================== */
-.hero-section {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
-#bg-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-  filter: brightness(0.45);
-}
-
+/* ===== HERO SECTION ===== */
 .hero-overlay {
-  position: relative;
   text-align: center;
-  top: 50%;
-  transform: translateY(-50%);
+  padding: 150px 20px 120px;
   color: #fff;
-  padding: 0 20px;
 }
 
 .hero-overlay h1 {
   font-size: 2.5em;
-  margin-bottom: 15px;
-  letter-spacing: 1px;
+  margin-bottom: 10px;
 }
 
 .hero-overlay p {
   font-size: 1.2em;
   color: #ddd;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .button {
@@ -149,6 +127,7 @@ nav a:hover,
   color: #fff;
   padding: 12px 30px;
   border-radius: 4px;
+  text-decoration: none;
   font-weight: bold;
   transition: background 0.3s ease;
 }
@@ -157,15 +136,14 @@ nav a:hover,
   background-color: #008fcc;
 }
 
-/* Footer */
+/* ===== FOOTER ===== */
 .footer {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 40px;
   padding: 25px 0;
-  background: rgba(0, 0, 0, 0.9);
-  border-top: 1px solid #111;
+  background: rgba(0, 0, 0, 0.85);
 }
 
 .social-icons {
@@ -183,40 +161,23 @@ nav a:hover,
   color: #00aaff;
 }
 
-.footer-contact {
-  color: #00aaff;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1em;
-  transition: color 0.3s ease;
-}
-
-.footer-contact:hover {
-  color: #fff;
-  text-decoration: underline;
-}
-
-/* Ensure icons render correctly */
-.fab {
-  vertical-align: middle;
-}
-
-
-/* ===========================
-   RESPONSIVE DESIGN
-=========================== */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   header.topnav {
     flex-direction: column;
     align-items: flex-start;
-    padding: 15px 25px;
   }
 
   nav {
     flex-direction: column;
     width: 100%;
-    gap: 15px;
+    gap: 10px;
     margin-top: 10px;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 20px;
   }
 
   .hero-overlay h1 {
@@ -225,9 +186,5 @@ nav a:hover,
 
   .hero-overlay p {
     font-size: 1em;
-  }
-
-  .social-icons {
-    gap: 18px;
   }
 }
